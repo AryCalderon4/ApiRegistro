@@ -24,3 +24,6 @@ Route::get('ubicacionAll', 'ubicacionCtrl@showAll');
 
 Route::resource('negocios', 'negociosCtrl');
 Route::get('negociosAll', 'negociosCtrl@showAll');
+
+Route::resource('contactos', 'contactosCtrl');
+Route::get('contactosAll', 'contactosCtrl@showAll');

@@ -50,6 +50,7 @@ class ubicacionCtrl extends Controller
         $ubicacion->Fracc  = $request->Fracc;
         $ubicacion->Ciudad  = $request->Ciudad;
         $ubicacion->Estado  = $request->Estado;
+        $ubicacion->negocio_id  = $request->negocio_id;
         $ubicacion->save(); //insert en BD
         return 1;
     }

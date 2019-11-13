@@ -9,7 +9,7 @@ class negociosCtrl extends Controller
 {
     public function index()
     {
-        //
+        return response()->json(negocio);
     }
     public function showAll()
     {
@@ -37,6 +37,7 @@ class negociosCtrl extends Controller
         //Ingresar un nuevo negocios
         
         //objeto = clase
+        
         $negocios = new negocios;
         $negocios->Nombre  = $request->Nombre;
         $negocios->Descripcion  = $request->Descripcion;
@@ -49,7 +50,8 @@ class negociosCtrl extends Controller
         $negocios->Categoria  = $request->Categoria;
         
         $negocios->save(); //insert en BD
-        return 1;
+        //Envia el ultimo regstro que se inserto
+        return response() -> json($negocios);
     }
     /**
      * Display the specified resource.
