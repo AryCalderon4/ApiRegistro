@@ -18,13 +18,11 @@ class RNegocios extends Migration
 
             $table->string('Nombre');
             $table->string('Descripcion');
-            //$table->string('Ubicacion'); 
-            $table->string('Celular')->nullable();//
+            $table->string('Celular')->nullable();
             $table->string('Email');
-            //$table->string('Contactos')->null();// 
-            $table->string('Horarios')->nullable();//
-            $table->string('Fotos')->nullable();;//
-            $table->string('Logo')->nullable();;//
+            $table->string('Horarios')->nullable();
+            $table->string('Fotos')->nullable();;
+            $table->string('Logo')->nullable();;
             $table->string('Productos');
             $table->string('Categoria');
            
