@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\login;
- 
+
 use Illuminate\Http\Request;
 
 class loginCtrln extends Controller
@@ -39,7 +39,7 @@ class loginCtrln extends Controller
         //objeto = clase
         $login = new login;
         $login->Correo  = $request->Correo;
-        $login->Contraseña  = $request->Contraseña;
+        $login->Contrasena  = $request->Contrasena;
         
         $login->save(); //insert en BD
         //Envia el ultimo regstro que se inserto

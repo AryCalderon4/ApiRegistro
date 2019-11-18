@@ -29,3 +29,4 @@ Route::resource('contactos', 'contactosCtrl');
 Route::get('contactosAll', 'contactosCtrl@showAll');
 
 Route::resource('login', 'loginCtrln');
+Route::get('loginAll', 'loginCtrln@showAll');
