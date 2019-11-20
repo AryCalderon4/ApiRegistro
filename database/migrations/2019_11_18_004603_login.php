@@ -16,8 +16,8 @@ class Login extends Migration
         Schema::create('logins', function (Blueprint $table) {
           
 
-            $table->string('Correo')->null();
-            $table->string('Contrasena')->null();
+            $table->string('Correo');
+            $table->string('Contrasena');
         
 
             $table->timestamps();

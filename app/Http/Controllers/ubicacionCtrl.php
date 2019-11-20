@@ -67,18 +67,7 @@ class ubicacionCtrl extends Controller
         return response()->json($ubicacion);
     }
 
-    //LOGIN
-   /* public function login(Request $request){
-        $username  = $request->username;
-        $password  = $request->password;
-        $Usuarios = Usuarios::where('username','=',$username)->where('password','=',$password)->get();
-        if ($ubicacion[0]->username==null) {
-            return 0;
-        }else {
-            return response()->json($ubicacion[count($ubicacion)-1]);
-        }
-    }*/ 
-
+ 
     /**
      * Show the form for editing the specified resource.
      *

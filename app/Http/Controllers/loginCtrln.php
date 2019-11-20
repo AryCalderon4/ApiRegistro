@@ -9,7 +9,7 @@ class loginCtrln extends Controller
 {
     public function index()
     {
-        return response()->json(negocio);
+        
     }
     public function showAll()
     {
@@ -58,17 +58,8 @@ class loginCtrln extends Controller
         return response()->json($login);
     }
 
-    //LOGIN
-   /* public function login(Request $request){
-        $username  = $request->username;
-        $password  = $request->password;
-        $Usuarios = Usuarios::where('username','=',$username)->where('password','=',$password)->get();
-        if ($login[0]->username==null) {
-            return 0;
-        }else {
-            return response()->json($login[count($login)-1]);
-        }
-    }*/ 
+    
+   
 
     /**
      * Show the form for editing the specified resource.
@@ -76,6 +67,24 @@ class loginCtrln extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //LOGIN
+    public function login(Request $request){
+        $Correo = $request->Correo;
+        $Contrasena = $request->Contrasena;
+        $usuario = login::where('Correo','=',$Correo)->where('Contrasena','=',$Contrasena)->get();
+        if (empty(json_decode($usuario))) {
+        return 0;
+        }else {
+        return response()->json($usuario[count($usuario)-1]);
+        }
+    }
+    /**
+    * Show the form for editing the specified resource.
+    *
+    * @param int $id
+    * @return \Illuminate\Http\Response
+    */
+    
     public function edit($id)
     {
         //
